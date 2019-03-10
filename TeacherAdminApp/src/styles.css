@@ -39,7 +39,7 @@ body{
 
     --color-ppal: #8C37BE;
 }
-h2,h3{
+h2,h3,h5{
     color: var(--color-ppal);
     position: relative;
 }

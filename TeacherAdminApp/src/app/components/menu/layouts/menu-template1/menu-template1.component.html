@@ -1,18 +1,35 @@
-<nav class="navbar border-bottom">
-    <a class="navbar-brand m-auto" [routerLink]="['/']">
-      <img src="../../../../../assets/icon-logo.png" class="" alt="">
-      Inicio
-    </a>
-    <a class="nav-item nav-link m-3" [routerLink]="['/contactenos']">
-      <span>Asignatura</span>
-    </a>
-    <a class="nav-item nav-link m-3" [routerLink]="['/faq']">
-      <span>Módulo</span>
-    </a>
+<nav class="navbar navbar-expand-lg shadow-sm bg-white col-12 shadow-bottom pt-3 pb-3">
+  <a class="navbar-brand" href="#">
+      <img class="ml-4" src="assets/img/icon-logo.png" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse row" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto col-12">
+      <li class="nav-item active">
+          <a class="nav-link" href="#"><h5 class="p-0 m-0 ml-4">Inicio</h5> <span class="sr-only">(current)</span></a>
+      </li>
+      <!-- <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li> -->
+      <li class="ml-auto">
+          <div class="btn-hex-right hex"> 
+                  btn right
+          </div>
+      </li>
+      <li>
+        <div class="btn-hex-right hex"> 
+              btn right
+        </div>
+      </li>
+      </ul>
+  </div>
 </nav>
-  <ng-content></ng-content>
-  <!-- <nav class="navbar navbar-light shadow-sm footer border-top menu-color-nav-footer p-2" [ngClass]="!location.isCurrentPathEqualTo('/home') ? 'fixed-bottom' : ''">
-    <footer class="col-sm-12 text-center">
-      <address class="m-0 small">Confecámaras | Red de cámaras de comercio - 2018</address>
-    </footer>
-  </nav> -->
+<ng-content></ng-content>
+<!-- <nav class="navbar navbar-light shadow-sm footer border-top menu-color-nav-footer p-2" [ngClass]="!location.isCurrentPathEqualTo('/home') ? 'fixed-bottom' : ''">
+  <footer class="col-sm-12 text-center">
+    <address class="m-0 small">Confecámaras | Red de cámaras de comercio - 2018</address>
+  </footer>
+</nav> -->
