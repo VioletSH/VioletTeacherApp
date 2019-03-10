@@ -1,0 +1,47 @@
+body{
+    overflow: hidden;
+}
+section{
+    min-height: 100vh;
+}
+#img-bg-hex{
+    width: 50%;
+    height: auto;
+    left: -7%;
+}
+#img-violet{
+    top: 30vh;
+    right: 0;
+}
+#img-logo{
+    right: 10%;    
+}
+
+/*------*/
+form{
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    width: 60%;
+    margin: 1rem 2rem 1rem 0.2rem;
+}
+/*Allows to draw the border-top every 2n+1 child (1,3,5,7,9,...)*/
+form :nth-child(even){
+    border-top: 1px solid #D9D8D8;
+}
+form button{
+    right: -4em;
+    top: Calc(50% - 1.2em);
+}
+/*This input's styles are just used in the login session*/
+input{
+    padding: 0.8rem;
+}
+form + div{
+    border-bottom: 1px solid #D9D8D8;
+    width: 65%;
+    padding-bottom: 5em;
+    margin-bottom: 2rem;
+}
+
+a{
+    color: inherit !important;
+}
