@@ -31,7 +31,7 @@ body {
 
 /*We define the css variables in the body to be accesible from other elements*/
 body{
-    --bg-darker: #33006A;
+    --bg-darker: #33006b;
     --bg-ligher: #993FCB;
 
     --bg-gradient: linear-gradient(to right, #993FCB, #33006A);
