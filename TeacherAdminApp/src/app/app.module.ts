@@ -11,10 +11,8 @@ import { ModalActivitiesComponent } from './components/core/layouts/modal-activi
 import { ModalModulesComponent } from './components/core/layouts/modal-modules/modal-modules.component';
 import { LoginComponent } from './components/home/containers/login/login.component';
 import { ForgetPasswordComponent } from './components/home/layouts/forget-password/forget-password.component';
-import { RequestCrud } from './shared/services/abstracts/request-crud.service.ts/request-crud.service.ts.component';
-import { Alerts } from './shared/services/alerts.service.ts/alerts.service.ts.component';
-import { Auth } from './shared/services/auth.service.ts/auth.service.ts.component';
 import { MenuTemplate1Component } from './components/menu/layouts/menu-template1/menu-template1.component';
+import { AppRoutesModule } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -28,13 +26,11 @@ import { MenuTemplate1Component } from './components/menu/layouts/menu-template1
     ModalModulesComponent,
     LoginComponent,
     ForgetPasswordComponent,
-    RequestCrud.Service.TsComponent,
-    Alerts.Service.TsComponent,
-    Auth.Service.TsComponent,
-    MenuTemplate1Component
+    MenuTemplate1Component,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
