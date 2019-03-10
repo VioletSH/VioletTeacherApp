@@ -14,6 +14,7 @@ import { ForgetPasswordComponent } from './components/home/layouts/forget-passwo
 import { RequestCrud } from './shared/services/abstracts/request-crud.service.ts/request-crud.service.ts.component';
 import { Alerts } from './shared/services/alerts.service.ts/alerts.service.ts.component';
 import { Auth } from './shared/services/auth.service.ts/auth.service.ts.component';
+import { MenuTemplate1Component } from './components/menu/layouts/menu-template1/menu-template1.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { Auth } from './shared/services/auth.service.ts/auth.service.ts.componen
     ForgetPasswordComponent,
     RequestCrud.Service.TsComponent,
     Alerts.Service.TsComponent,
-    Auth.Service.TsComponent
+    Auth.Service.TsComponent,
+    MenuTemplate1Component
   ],
   imports: [
     BrowserModule
