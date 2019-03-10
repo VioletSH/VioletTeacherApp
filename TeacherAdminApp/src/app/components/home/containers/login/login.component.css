@@ -5,16 +5,17 @@ section{
     min-height: 100vh;
 }
 #img-bg-hex{
-    width: 50%;
-    height: auto;
-    left: -7%;
+    left: -10vh;
 }
 #img-violet{
-    top: 30vh;
+    bottom: 0vh;
     right: 0;
 }
 #img-logo{
-    right: 10%;    
+    top: 10vh;
+    left: 35vh;
+    width: 40%;
+    height: auto; 
 }
 
 /*------*/

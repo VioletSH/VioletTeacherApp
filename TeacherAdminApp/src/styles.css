@@ -1,4 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+	font-family: "Google Sans";
+	src: url("assets/fonts/Google-Sans-Font/GoogleSans-Regular.woff") format("woff");
+}
+
+body {
+    font-family: 'Google Sans' !important;
+    /* background-color: #f5f5f5 !important; */
+}
+
 /*Animations*/
   
 @keyframes wave {
@@ -33,14 +43,14 @@ h2,h3{
     color: var(--color-ppal);
     position: relative;
 }
-h2::after,h3::after{
+/* h2::after,h3::after{
     content: '';
     position: absolute;
     bottom: -0.2rem;
     left: 0;
     border-bottom: 2px solid var(--color-ppal);
     width: 100%;
-}
+} */
 /*Buttons*/
 .btn{
     border-radius: 0 !important; /*Overrides Bootstrap roundness*/

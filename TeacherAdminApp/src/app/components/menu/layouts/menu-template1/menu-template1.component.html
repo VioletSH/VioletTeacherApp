@@ -1,3 +1,18 @@
-<p>
-  menu-template1 works!
-</p>
+<nav class="navbar border-bottom">
+    <a class="navbar-brand m-auto" [routerLink]="['/']">
+      <img src="../../../../../assets/icon-logo.png" class="" alt="">
+      Inicio
+    </a>
+    <a class="nav-item nav-link m-3" [routerLink]="['/contactenos']">
+      <span>Asignatura</span>
+    </a>
+    <a class="nav-item nav-link m-3" [routerLink]="['/faq']">
+      <span>Módulo</span>
+    </a>
+</nav>
+  <ng-content></ng-content>
+  <!-- <nav class="navbar navbar-light shadow-sm footer border-top menu-color-nav-footer p-2" [ngClass]="!location.isCurrentPathEqualTo('/home') ? 'fixed-bottom' : ''">
+    <footer class="col-sm-12 text-center">
+      <address class="m-0 small">Confecámaras | Red de cámaras de comercio - 2018</address>
+    </footer>
+  </nav> -->
