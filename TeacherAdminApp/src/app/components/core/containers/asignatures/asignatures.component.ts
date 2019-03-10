@@ -7,7 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AsignaturesComponent implements OnInit {
 
-  constructor() { }
+  asignatures:Array<object>;
+  constructor() { 
+    this.asignatures = [
+      {
+        name:"Arquitectura de Sistemas Multimedia",
+        career: "Ingeniería Multimedia",
+        totalStudents: 20,
+        group:1
+      },
+      {
+        name:"Arquitectura de Sistemas Multimedia",
+        career: "Ingeniería Multimedia",
+        totalStudents: 16,
+        group:2
+      },
+      {
+        name:"Video y Televisión Digital",
+        career: "Ingeniería Multimedia",
+        totalStudents: 20,
+        group:1
+      },
+    ]
+  }
 
   ngOnInit() {
   }

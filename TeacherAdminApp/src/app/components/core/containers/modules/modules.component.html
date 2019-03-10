@@ -1,2 +1,20 @@
-<app-menu-template1 class="">
-</app-menu-template1>
+<div class="d-flex justify-content-center align-items-center h-100 w-100">
+    <div class="hex-container d-flex flex-wrap">
+        <div *ngFor="let module of modules; index as i" class="hex hex-big-item position-relative">
+            <div class="hex hex-big-item d-flex">
+                <div class="item-content d-flex flex-column">
+                    <h3> Módulo {{i+1}}</h3>
+                    <h6>{{module.name}}</h6>
+                    <span>{{module.totalStudentsFinished}}/{{totalStudents}} estudiantes culminaron el módulo</span>
+                </div>
+                <div class="hex ml-auto">
+                    {{module.totalStudentsFinished/totalStudents * 100}}%
+                </div>
+            </div>
+            <div class="icon-options position-absolute"></div>
+        </div>
+        <div class="hex hex-big-item hex-big-add">
+            <span>+</span>
+        </div>
+    </div>
+</div>

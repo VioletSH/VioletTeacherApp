@@ -301,6 +301,10 @@ input:checked + .slider:before {
     height: Calc(0.22 * var(--hex-width));
     background: #B960EB;
     color: white;
+    transition: 0.3s;
+}
+.hex-big-item:hover{
+    transform: scale(1.04,1.04);
 }
 .hex-big-item::before{
     content: none;
@@ -312,6 +316,10 @@ input:checked + .slider:before {
     background: white;
     color: var(--color-ppal);
     position: initial;
+}
+.hex-big-item .hex-big-item:hover{
+    transform: none;
+    color: white;
 }
 .hex-big-item .hex{
     --hex-width: 118px;
