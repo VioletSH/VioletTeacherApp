@@ -1,0 +1,9 @@
+body{
+    background: var(--bg-gray);
+}
+.hex-big-item .hex-big-item .hex{
+    background:var(--bg-gradient-alt);
+    font-weight: bold;
+    font-size: 1.5em;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}

@@ -38,6 +38,8 @@ body{
     --bg-gradient-alt: linear-gradient(to right, transparent, #993FCB);
 
     --color-ppal: #8C37BE;
+
+    --bg-gray: #f7f7f7;
 }
 h2,h3,h5{
     color: var(--color-ppal);
@@ -298,7 +300,7 @@ input:checked + .slider:before {
     --hex-shape: polygon(7% 0%, 93% 0%, 100% 50%, 93% 100%, 7% 100%, 0% 50%);
     height: Calc(0.22 * var(--hex-width));
     background: #B960EB;
-    color: white
+    color: white;
 }
 .hex-big-item::before{
     content: none;
@@ -309,6 +311,7 @@ input:checked + .slider:before {
     --hex-shape: polygon(7% -4%, 93% -4%, 100% 50%, 93% 104%, 7% 104%, 0% 50%);
     background: white;
     color: var(--color-ppal);
+    position: initial;
 }
 .hex-big-item .hex{
     --hex-width: 118px;
@@ -328,11 +331,15 @@ input:checked + .slider:before {
 .hex-big-add::before{
     content: '' !important;
 }
-.hex-big-add .hex{
-    --hex-width: 100px;
+.hex-big-add span{
     color: var(--color-ppal);
-    font-size: 4em;
-    right: -38%;
+    font-size: 5em;
+    font-weight: 100;
+}
+    
+.hex-big-item .icon-options{
+    top : -2px;
+    right: -2px;
 }
 
 /*Other Shapes (elements needs to inherit hex class)*/
@@ -353,4 +360,24 @@ input:checked + .slider:before {
     --hex-shape: polygon(11% 0%, 91% 0%, 100% 50%, 91% 100%, 11% 100%, 20% 50%);
 }
 
+/*__________________________________________________*/
+
+/*__________________________________________________*/
+.hex-container{
+    width: auto;
+    flex-flow: row wrap;
+}
+.hex-container > :nth-child(even){
+    top: 4em;
+    left: -1.2em;
+}
+.hex-container > :nth-child(odd){
+    right: -1.2em;
+}
+/*__________________________________________________*/
+
+[class^="icon-"]{
+    color: var(--color-ppal);
+    z-index: 2;
+}
 /*__________________________________________________*/
