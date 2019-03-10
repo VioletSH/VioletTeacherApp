@@ -5,10 +5,10 @@
         <img class="position-absolute" src="assets/img/logo1.png" alt="" id="img-logo">
     </section>
     <section class="col-6 col-md-5 d-flex flex-column justify-content-center align-items-center row p-0">
-        <h2>Plataforma de administración</h2>
+        <h2 (click)="onOpenModal()">Plataforma de administración</h2>
         <form action="" class="d-flex flex-column position-relative">
-            <input type="text" name="" id="" placeholder="Usuario">
-            <input type="password" name="" id="" placeholder="Contraseña">
+            <input type="text" name="user" id="user" placeholder="Usuario">
+            <input type="password" name="pass" id="pass" placeholder="Contraseña">
             <button class="btn btn-violet-primary position-absolute">Iniciar Sesión</button>
         </form>     
         <div class="row justify-content-around">

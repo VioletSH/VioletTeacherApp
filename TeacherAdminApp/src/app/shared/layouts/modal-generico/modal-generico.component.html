@@ -1,0 +1,9 @@
+<header class="modal-header bg-white border-bottom-0">
+  <h4 class="modal-title" id="modal-basic-title">{{modelo.titulo}}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.close()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</header>
+<section class="modal-body">
+  <ng-content></ng-content>
+</section>

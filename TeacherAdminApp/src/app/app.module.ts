@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { NgbModule, NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AsignaturesComponent } from './components/core/containers/asignatures/asignatures.component';
@@ -13,6 +16,8 @@ import { LoginComponent } from './components/home/containers/login/login.compone
 import { ForgetPasswordComponent } from './components/home/layouts/forget-password/forget-password.component';
 import { MenuTemplate1Component } from './components/menu/layouts/menu-template1/menu-template1.component';
 import { AppRoutesModule } from './app.routes';
+import { ModalGenericoComponent } from './shared/layouts/modal-generico/modal-generico.component';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +26,7 @@ import { AppRoutesModule } from './app.routes';
     ModulesComponent,
     ActivitiesComponent,
     ResourcesComponent,
+    ModalGenericoComponent,
     ModalAsignaturesComponent,
     ModalActivitiesComponent,
     ModalModulesComponent,
@@ -30,9 +36,17 @@ import { AppRoutesModule } from './app.routes';
   ],
   imports: [
     BrowserModule,
-    AppRoutesModule
+    AppRoutesModule,
+    HttpClientModule,
+    NgbModule,
+    NgbModalModule,
+		FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    ForgetPasswordComponent,
+    ModalGenericoComponent
+	]
 })
 export class AppModule { }
