@@ -1,1 +1,9 @@
-
+[class^="btn-hex-"], [class^="icon-"]{
+    margin: auto -0.5em;
+}
+[class^="icon-"]{
+    font-size: 2em;
+    position: absolute;
+    top: -0.25em;
+    right: 0.75em;
+}
