@@ -15,8 +15,9 @@ import { ModalModulesComponent } from './components/core/layouts/modal-modules/m
 import { LoginComponent } from './components/home/containers/login/login.component';
 import { ForgetPasswordComponent } from './components/home/layouts/forget-password/forget-password.component';
 import { MenuTemplate1Component } from './components/menu/layouts/menu-template1/menu-template1.component';
-import { AppRoutesModule } from './app.routes';
+import { AppRoutesModule, ROUTES } from './app.routes';
 import { ModalGenericoComponent } from './shared/layouts/modal-generico/modal-generico.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { ModalGenericoComponent } from './shared/layouts/modal-generico/modal-ge
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(ROUTES, {useHash: true}),
     AppRoutesModule,
     HttpClientModule,
     NgbModule,
