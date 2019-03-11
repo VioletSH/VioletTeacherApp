@@ -11,8 +11,25 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 export class ModalActivitiesComponent implements OnInit {
 
   modalGenerico: ModalGenericoModel;
+  recursos: Array<any>;
 
-  constructor(private activeModal: NgbActiveModal) { }
+  constructor(private activeModal: NgbActiveModal) { 
+    this.recursos = [
+      {name : 'Recurso 1', type : 0},
+      {name : 'Recurso 2', type : 1},
+      {name : 'Recurso 3', type : 2},
+      {name : 'Recurso 4', type : 3},
+      {name : 'Recurso 5', type : 0},
+      {name : 'Recurso 1', type : 0},
+      {name : 'Recurso 2', type : 1},
+      {name : 'Recurso 3', type : 2},
+      {name : 'Recurso 4', type : 3},
+      {name : 'Recurso 1', type : 0},
+      {name : 'Recurso 2', type : 1},
+      {name : 'Recurso 3', type : 2},
+      {name : 'Recurso 4', type : 3}
+    ];
+  }
 
   ngOnInit() {
     this.modalGenerico = {

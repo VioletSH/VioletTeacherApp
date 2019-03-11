@@ -5,14 +5,36 @@ main{
 .title{
     font-size: 60px;
 }
-.tabla{
-    background-color: white;
-    border: 3px solid #993FCB;
-}
-.tabla2{
-    height: 100px;
-    overflow-y: auto; 
-}
 span{
     font-weight: 700;
+}
+em{
+    font-size: 5em;
+}
+.act-main-info{
+    right: 2em;
+    top: -1.5em;
+    font-size: 1.3rem;
+}
+.act-main-info h5{
+    margin: 0 0.5em;
+}
+.act-main-info span{
+    font-size: 1em;
+    font-weight: normal;
+}
+.float-button{
+    bottom: 2rem;
+    right: 2rem;
+    vertical-align: middle;
+    color: white;
+    --hex-width: 10rem;
+    font-size: 5rem;
+    background: var(--color-ppal);
+}
+.float-button::before{
+    content: none;
+}
+.float-button:hover{
+    background: var(--bg-darker);
 }
