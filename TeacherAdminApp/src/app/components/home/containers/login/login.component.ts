@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
 
   onOpenModal() {
     const modalRef = this.modalService.open(ForgetPasswordComponent,
-      { centered: true, size: 'lg', backdropClass: 'light-blue-backdrop' });
+      { centered: true, size: 'lg' });
     // If we have some input
     // modalRef.componentInstance.establecimientos = this.establecimientos;
     modalRef.result.then(() => {

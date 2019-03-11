@@ -46,7 +46,10 @@ import { ModalGenericoComponent } from './shared/layouts/modal-generico/modal-ge
   bootstrap: [AppComponent],
   entryComponents: [
     ForgetPasswordComponent,
-    ModalGenericoComponent
+    ModalGenericoComponent,
+    ModalModulesComponent,
+    ModalActivitiesComponent,
+    ModalAsignaturesComponent
 	]
 })
 export class AppModule { }
