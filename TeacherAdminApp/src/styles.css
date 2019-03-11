@@ -58,10 +58,16 @@ h2,h3,h5{
 /*Buttons*/
 .btn{
     border-radius: 0 !important; /*Overrides Bootstrap roundness*/
+    margin: 2px;
 }
 .btn-violet-primary{
     background: var(--bg-gradient);
     color: white !important;
+    width: fit-content;
+}
+.btn-violet-secondary{
+    border:  1px solid var(--bg-darker);
+    background: white !important;
     width: fit-content;
 }
 
@@ -103,7 +109,7 @@ h2,h3,h5{
 }
 
 /* BOTTOM BARS ================================= */
-.bar 	{ position:relative; display:block; width:300px; }
+.bar 	{ position:relative; display:block; width:100%; }
 .bar:before, .bar:after 	{
     content:'';
     height:2px; 
@@ -353,21 +359,36 @@ input:checked + .slider:before {
 }
 
 /*Other Shapes (elements needs to inherit hex class)*/
+.btn-hex-left, .btn-hex-right{
+    min-width: 12rem;
+    min-height: 3rem;
+    font-size: 1.4em;
+    justify-content: flex-start;
+}
+.btn-hex-left:hover::before, .btn-hex-right:hover::before{
+    background: transparent;
+}
+.btn-hex-left:hover, .btn-hex-right:hover{
+    color: white;
+}
 .btn-hex-right{
     --hex-shape: polygon(10% 0%, 90% 0%, 80% 50%, 90% 100%, 10% 100%, 0% 50%);
-    min-width: 8em;
-    min-height: 2em;
+}
+.btn-hex-right span{
+    margin-left: 0.8em;
 }
 .btn-hex-right::before{
-    --hex-shape: polygon(9% 0%, 89% 0%, 80% 50%, 89% 100%, 9% 100%, 0% 50%);
+    --hex-shape: polygon(10% 0%, 90% 0%, 80% 50%, 90% 100%, 10% 100%, 1% 50%);
+    transition: .25s;
 }
 .btn-hex-left{
     --hex-shape: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 20% 50%);
-    min-width: 8em;
-    min-height: 2em;
+}
+.btn-hex-left span{
+    margin-right: 0.8em;
 }
 .btn-hex-left::before{
-    --hex-shape: polygon(11% 0%, 91% 0%, 100% 50%, 91% 100%, 11% 100%, 20% 50%);
+    --hex-shape: polygon(10% 0%, 91% 0%, 100% 50%, 91% 100%, 10% 100%, 20% 50%);
 }
 
 /*__________________________________________________*/
