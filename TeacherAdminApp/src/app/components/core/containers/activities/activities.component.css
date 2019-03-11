@@ -11,6 +11,7 @@ main{
 }
 .tabla2{
     height: 100px;
+    overflow-y: auto; 
 }
 span{
     font-weight: 700;

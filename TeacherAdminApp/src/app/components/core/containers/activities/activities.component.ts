@@ -9,7 +9,46 @@ import { ModalActivitiesComponent } from '../../layouts/modal-activities/modal-a
 })
 export class ActivitiesComponent implements OnInit {
 
-  constructor(private modalService: NgbModal) { }
+
+  recursos: Array<any>;
+  estudiantes: Array<any>;
+
+
+  constructor(private modalService: NgbModal) { 
+    this.recursos = [
+      {name : 'Recurso 1', type : 0},
+      {name : 'Recurso 2', type : 1},
+      {name : 'Recurso 3', type : 2},
+      {name : 'Recurso 4', type : 3},
+      {name : 'Recurso 5', type : 0},
+      {name : 'Recurso 1', type : 0},
+      {name : 'Recurso 2', type : 1},
+      {name : 'Recurso 3', type : 2},
+      {name : 'Recurso 4', type : 3},
+      {name : 'Recurso 1', type : 0},
+      {name : 'Recurso 2', type : 1},
+      {name : 'Recurso 3', type : 2},
+      {name : 'Recurso 4', type : 3}
+    ];
+
+    this.estudiantes = [
+      {name : 'Estudiante 1'},
+      {name : 'Estudiante 2'},
+      {name : 'Estudiante 3'},
+      {name : 'Estudiante 4'},
+      {name : 'Estudiante 5'},
+      {name : 'Estudiante 1'},
+      {name : 'Estudiante 2'},
+      {name : 'Estudiante 3'},
+      {name : 'Estudiante 4'},
+      {name : 'Estudiante 1'},
+      {name : 'Estudiante 2'},
+      {name : 'Estudiante 3'},
+      {name : 'Estudiante 4'}
+    ];
+  
+  }
+  
 
   ngOnInit() {
   }

@@ -9,6 +9,7 @@
          <h2 class="">Actividad 1: ¿Qué es un software?</h2>
         </div>
       </div>
+      
       <div class="row">
         <div class="col-12">
           <h5>Sobre la actividad:</h5>
@@ -45,17 +46,86 @@
             </div> 
           </div>
           <div class="row">
-            <div class="col-12 tabla tabla2">
-              <div class="col-4 mt-3 ">
+            <div class="col-12 tabla tabla2 d-flex flex-row flex-wrap pt-3" >
+              <div class="col-3 p-0 m-0 mb-3" *ngFor="let recurso of recursos">
                 <div class="d-flex flex-row">
                   <img src="assets/img/icon-sound.png" alt="ícono de sonido" width="auto" height="auto">
-                  <p class="m-0 ml-3 justify-content-center">Recurso 1</p>
+                  <p class="m-0 ml-3 align-self-center">{{recurso.name}}</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="row mt-2">
+          <div class="col-12">
+            <h5>Sobre la actividad:</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <div class="row">
+              <div class="col-12">
+                <p><span>Tiempo invertido (prom): </span>
+                  10 min
+                </p>
+              </div> 
+            </div> 
+            <div class="row">
+              <div class="col-12">
+                <p><span>Nota (Prom): </span>
+                  4,2
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-8">
+
+            <div class="row">
+              <div class="col-6 m-0 p-0 pl-3">
+                <div class="row">
+                  <div class="col-11">
+                    <p><span>Recursos utilizados: </span>
+                      5/20 
+                    </p>
+                  </div> 
+                </div>
+                  <div class="row">
+                    <div class="col-11 tabla tabla2 d-flex flex-row flex-wrap pt-3" >
+                      <div class="col-6 p-0 m-0 mb-3" *ngFor="let recurso of recursos">
+                        <div class="d-flex flex-row">
+                          <img src="assets/img/icon-sound.png" alt="ícono de sonido" width="auto" height="auto">
+                          <p class="m-0 ml-3 align-self-center">{{recurso.name}}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="col-6 m-0 p-0 pl-3">
+                <div class="row">
+                  <div class="col-11">
+                    <p><span>Estudiantes que culminaron: </span>
+                      20/20 
+                    </p>
+                  </div> 
+                </div>
+                <div class="row">
+                  <div class="col-11 tabla tabla2 d-flex flex-row flex-wrap pt-3" >
+                    <div class="col-12 p-0 m-0 mb-3" *ngFor="let estudiante of estudiantes">
+                      <div class="d-flex flex-row">
+                        <img src="assets/img/icon-sound.png" alt="ícono de sonido" width="auto" height="auto">
+                        <p class="m-0 ml-3 align-self-center">{{estudiante.name}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+        </div>
       
 
     </div>
