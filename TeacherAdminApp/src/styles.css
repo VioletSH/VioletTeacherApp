@@ -6,7 +6,7 @@
 
 body, html {
     width: 100%;
-    height: 100%;
+    height: Calc(100% - 100px); /*Allows router-outlet components to fill reaming space, 100px is the nav height*/
     font-family: 'Google Sans' !important;
     background-color: #f5f5f5 !important; 
 }
@@ -342,7 +342,7 @@ input:checked + .slider:before {
 }
 /*Long hexagon*/
 .hex-big-item{
-    --hex-width: 35em;
+    --hex-width: 34em;
     --hex-shape: polygon(7% 0%, 93% 0%, 100% 50%, 93% 100%, 7% 100%, 0% 50%);
     height: Calc(0.22 * var(--hex-width));
     background: #B960EB;
@@ -440,12 +440,25 @@ input:checked + .slider:before {
     width: auto;
     flex-flow: row wrap;
 }
-.hex-container > :nth-child(even){
-    top: 4em;
-    left: -1.2em;
+@media (min-width: 1200px) {
+    .hex-container > :nth-child(even){
+        top: 4em;
+        left: -1.2em;
+    }
+    .hex-container > :nth-child(odd){
+        right: -1.2em;
+    }
 }
-.hex-container > :nth-child(odd){
-    right: -1.2em;
+@media (max-width: 1200px) {
+    .hex-container{
+        justify-content: center;
+    }
+    .hex-big-item{
+        max-width: 80vw;
+    }
+    .hex-big-item .hex-big-item{
+        max-width: none;
+    }
 }
 /*__________________________________________________*/
 
