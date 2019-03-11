@@ -1,6 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ModalGenericoModel } from 'src/app/shared/models/modal.model';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-modal-activities',
@@ -11,10 +12,11 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 export class ModalActivitiesComponent implements OnInit {
 
   modalGenerico: ModalGenericoModel;
-  recursos: Array<any>;
+  resources:Array<object>;
+  formActivities: FormGroup;
 
-  constructor(private activeModal: NgbActiveModal) { 
-    this.recursos = [
+  constructor(private activeModal: NgbActiveModal, private formBuilder: FormBuilder) { 
+    this.resources = [
       {name : 'Recurso 1', type : 0},
       {name : 'Recurso 2', type : 1},
       {name : 'Recurso 3', type : 2},
@@ -35,12 +37,26 @@ export class ModalActivitiesComponent implements OnInit {
     this.modalGenerico = {
       titulo: 'Agregar actividad'
     };
+    this.formActivities = this.formBuilder.group({
+      title: ['', Validators.required],
+      description: ['', Validators.required],
+      assistant: [''],
+      duration: [''],
+      maxnote: [''],
+      resource: ['']
+    });
   }
 
   confirm(): void {
     if (this.activeModal) {
       this.activeModal.close();
-      }
+    }
+  }
+
+  onSave() {
+    if (this.activeModal) {
+      this.activeModal.close(this.formActivities.value);
+    }
   }
 
 }

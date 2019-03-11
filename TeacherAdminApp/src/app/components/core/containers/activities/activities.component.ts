@@ -10,12 +10,13 @@ import { ModalActivitiesComponent } from '../../layouts/modal-activities/modal-a
 export class ActivitiesComponent implements OnInit {
 
 
-  recursos: Array<any>;
-  estudiantes: Array<any>;
+  resources: Array<object>;
+  students: Array<object>;
+  activities: Array<object>;
 
 
   constructor(private modalService: NgbModal) { 
-    this.recursos = [
+    this.resources = [
       {name : 'Recurso 1', type : 0},
       {name : 'Recurso 2', type : 1},
       {name : 'Recurso 3', type : 2},
@@ -31,7 +32,7 @@ export class ActivitiesComponent implements OnInit {
       {name : 'Recurso 4', type : 3}
     ];
 
-    this.estudiantes = [
+    this.students = [
       {name : 'Estudiante 1'},
       {name : 'Estudiante 2'},
       {name : 'Estudiante 3'},
@@ -46,6 +47,12 @@ export class ActivitiesComponent implements OnInit {
       {name : 'Estudiante 3'},
       {name : 'Estudiante 4'}
     ];
+
+    this.activities = [
+      {name : 'Actividad 1', title : '¿Qué es un Software?'},
+      {name : 'Actividad 2', title : '¿Qué es un Hardware?'},
+      {name : 'Actividad 3', title : '¿Telecomunicación?'}
+    ];
   
   }
   
@@ -58,7 +65,10 @@ export class ActivitiesComponent implements OnInit {
       { centered: true, size: 'lg' });
     // If we have some input
     // modalRef.componentInstance.establecimientos = this.establecimientos;
-    modalRef.result.then(() => {
+    modalRef.result.then((formAnswer:any) => {
+      if (formAnswer){
+        this.activities.push({name: formAnswer.title, title: formAnswer.description});
+      }
     });
   }
 

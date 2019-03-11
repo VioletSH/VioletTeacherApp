@@ -1,56 +1,65 @@
 <app-modal-generico [modelo]="modalGenerico">
     <main class="ml-5 mr-5 mb-4">
-      <div class="text-input mb-5">      
-        <input type="text" id="titulo" name="titulo" required>
-          <span class="highlight"></span>
-          <span class="bar"></span>
-        <label>Título</label>
-      </div>
-      <div class="text-input mb-5">      
-        <input type="text" id="descripcion" name="descripcion" required>
-          <span class="highlight"></span>
-          <span class="bar"></span>
-        <label>Descripción</label>
-      </div>
-      <div class="d-flex flex-row justify-content-between">
-          <div class="text-input mb-3 col-4">      
-            <input type="text" id="asistente" name="asistente" required>
+      <form [formGroup]="formActivities" (ngSubmit)="onSave()">
+        
+          <div class="text-input mb-5">      
+            <input type="text" id="title" formControlName="title">
               <span class="highlight"></span>
               <span class="bar"></span>
-            <label>Asistente</label>
+            <label>Título</label>
           </div>
-          <div class="text-input mb-3 col-4">      
-            <input type="text" id="duracion" name="duracion" required>
+          <div class="text-input mb-5">      
+            <input type="text" id="description" formControlName="description">
               <span class="highlight"></span>
               <span class="bar"></span>
-            <label>Duración</label>
+            <label>Descripción</label>
           </div>
-          <div class="text-input mb-5 col-4">      
-            <input type="text" id="notaMaxima" name="notaMaxima" required>
-              <span class="highlight"></span>
-              <span class="bar"></span>
-            <label>Nota Maxima</label>
+          <div class="d-flex flex-row justify-content-between">
+              <div class="text-input mb-3 col-4">      
+                <input type="text" id="assistant" formControlName="assistant">
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                <label>Asistente</label>
+              </div>
+              <div class="text-input mb-3 col-4">      
+                <input type="text" id="duration" formControlName="duration">
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                <label>Duración</label>
+              </div>
+              <div class="text-input mb-5 col-4">      
+                <input type="text" id="maxnote" formControlName="maxnote">
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                <label>Nota Maxima</label>
+              </div>
           </div>
-      </div>
-      <div>
-        <h5>Asociar Recursos</h5>
-        <div class="row">
-            <div class="col-12 table table2 d-flex flex-row flex-wrap pt-3" >
-              <div class="col-3 p-0 m-0 mb-3" *ngFor="let recurso of recursos">
-                <div class="d-flex flex-row">
-                  <img src="assets/img/icon-sound.png" alt="ícono de sonido" width="auto" height="auto">
-                  <p class="m-0 ml-3 align-self-center">{{recurso.name}}</p>
+          <div>
+            <h5>Asociar Recursos</h5>
+            <div class="row">
+                <div class="col-12 table table2 d-flex flex-row flex-wrap pt-3" >
+                  <div class="col-3 p-0 m-0 mb-3" *ngFor="let resource of resources">
+                    <div class="d-flex flex-row">
+                      <img src="assets/img/icon-sound.png" alt="ícono de sonido" width="auto" height="auto">
+                      <p class="m-0 ml-3 align-self-center">{{resource.name}}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
           </div>
-      </div>
-      <div class="text-input mb-5 position-relative">      
-        <input type="text" id="subirRecursos" name="subirRecursos" required>
-          <span class="highlight"></span>
-          <span class="bar"></span>
-          <i class="icon-help"></i>
-        <label>Subir Recursos</label>
-      </div>
+          <div class="text-input mb-5 position-relative">      
+            <input type="text" id="resource" formControlName="resource">
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <i class="icon-help"></i>
+            <label>Subir Recursos</label>
+          </div>
+
+        <div class="d-flex flex-row flex-wrap justify-content-center ml-auto mr-auto col-4">
+          <button class="btn btn-violet-primary" type="submit" [disabled]="!formActivities.valid">Aceptar</button>
+          <button class="btn btn-violet-secondary" (click)="confirm()">Cancelar</button>
+        </div>
+      </form> 
+      
     </main>
   </app-modal-generico>

@@ -1,67 +1,82 @@
 <main class="container">
+
   <div class="row">
     <div class="col-12 mt-5">
       <h2 class="title">Actividades</h2>
     </div>
-    <div class="col-12 table p-5 position-relative">
+
+    <div class="col-12 table p-3 pb-0 position-relative accordion mt-4" id="accordionExample" *ngFor="let activity of activities; index as i">
       <div class="row">
-        <div class="col-12 mb-3">
-         <h2 class="">Actividad 1: ¿Qué es un software?</h2>
+        <div class="col-12 mb-3" data-toggle="collapse" [attr.data-target]="'#Collapse'+i" aria-expanded="true" [attr.aria-controls]="'Collapse'+i">
+         <h2 class="">{{activity.name}}: {{activity.title}}</h2>
+        </div>
+        
+        <div class="table position-absolute col-6 d-flex flex-row flex-wrap align-items-center act-main-info">
+            <h5>Activo:</h5>
+            <label class="switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider hex"></div>
+            </label>
+            <h5>Fecha publicación</h5>
+            <span>06/12/18</span>
+            <h5>Nombre archivo</h5>  
+            <span>Video1[Drive]</span>
         </div>
       </div>
       
-      <div class="row">
-        <div class="col-12">
-          <h5>Sobre la actividad:</h5>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-4">
-          <div class="row">
-            <div class="col-12">
-              <p><span>Descripción: </span>
-                En esta actividad se a dar a conocer el concepto y su aplicación en los sistemas multimedia. 
-              </p>
-            </div> 
-          </div> 
-          <div class="row">
-            <div class="col-6">
-              <p><span>Duración: </span>
-                2 min
-              </p>
-            </div>
-            <div class="col-6">
-              <p><span>Asistente: </span>
-                Violet
-              </p>
-            </div>
+      <div [attr.id]="'Collapse'+i" class="collapse row p-3 pr-4" [attr.aria-labelledby]="'heading'+i" data-parent="#accordionExample">
+        <div class="row">
+          <div class="col-12">
+            <h5>Sobre la actividad:</h5>
           </div>
         </div>
-        <div class="col-8">
-          <div class="row">
-            <div class="col-12">
-              <p><span>Recursos disponibles: </span>
-                20 
-              </p>
+        <div class="row">
+          <div class="col-4">
+            <div class="row">
+              <div class="col-12">
+                <p><span>Descripción: </span>
+                  En esta actividad se a dar a conocer el concepto y su aplicación en los sistemas multimedia. 
+                </p>
+              </div> 
             </div> 
+            <div class="row">
+              <div class="col-6">
+                <p><span>Duración: </span>
+                  2 min
+                </p>
+              </div>
+              <div class="col-6">
+                <p><span>Asistente: </span>
+                  Violet
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="row">
-            <div class="col-12 table table2 d-flex flex-row flex-wrap pt-3" >
-              <div class="col-3 p-0 m-0 mb-3" *ngFor="let recurso of recursos">
-                <div class="d-flex flex-row">
-                  <img src="assets/img/icon-sound.png" alt="ícono de sonido" width="auto" height="auto">
-                  <p class="m-0 ml-3 align-self-center">{{recurso.name}}</p>
+          <div class="col-8">
+            <div class="row">
+              <div class="col-12">
+                <p><span>Recursos disponibles: </span>
+                  20 
+                </p>
+              </div> 
+            </div>
+            <div class="row">
+              <div class="col-12 table table2 d-flex flex-row flex-wrap pt-3" >
+                <div class="col-3 p-0 m-0 mb-3" *ngFor="let resource of resources">
+                  <div class="d-flex flex-row">
+                    <img src="assets/img/icon-sound.png" alt="ícono de sonido" width="auto" height="auto">
+                    <p class="m-0 ml-3 align-self-center">{{resource.name}}</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="row mt-2">
-          <div class="col-12">
-            <h5>Sobre la actividad:</h5>
-          </div>
+        <div class="row mt-2">
+            <div class="col-12">
+              <h5>Sobre la actividad:</h5>
+            </div>
         </div>
         <div class="row">
           <div class="col-4">
@@ -93,10 +108,10 @@
                 </div>
                   <div class="row">
                     <div class="col-11 table table2 d-flex flex-row flex-wrap pt-3" >
-                      <div class="col-6 p-0 m-0 mb-3" *ngFor="let recurso of recursos">
+                      <div class="col-6 p-0 m-0 mb-3" *ngFor="let resource of resources">
                         <div class="d-flex flex-row">
                           <img src="assets/img/icon-sound.png" alt="ícono de sonido" width="auto" height="auto">
-                          <p class="m-0 ml-3 align-self-center">{{recurso.name}}</p>
+                          <p class="m-0 ml-3 align-self-center">{{resource.name}}</p>
                         </div>
                       </div>
                     </div>
@@ -112,10 +127,10 @@
                 </div>
                 <div class="row">
                   <div class="col-11 table table2 d-flex flex-row flex-wrap pt-3" >
-                    <div class="col-12 p-0 m-0 mb-3" *ngFor="let estudiante of estudiantes">
+                    <div class="col-12 p-0 m-0 mb-3" *ngFor="let student of students">
                       <div class="d-flex flex-row">
                         <img src="assets/img/icon-sound.png" alt="ícono de sonido" width="auto" height="auto">
-                        <p class="m-0 ml-3 align-self-center">{{estudiante.name}}</p>
+                        <p class="m-0 ml-3 align-self-center">{{student.name}}</p>
                       </div>
                     </div>
                   </div>
@@ -124,19 +139,11 @@
             </div>
           </div>
         </div>
-      <div class="table position-absolute col-6 d-flex flex-row flex-wrap align-items-center act-main-info">
-        <h5>Activo:</h5>
-        <label class="switch" for="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div class="slider hex"></div>
-        </label>
-        <h5>Fecha publicación</h5>
-        <span>06/12/18</span>
-        <h5>Nombre archivo</h5>  
-        <span>Video1[Drive]</span>
       </div>
 
     </div>
+
   </div>
+
   <button class="hex position-fixed float-button" (click)="onOpenModal()">+</button>
 </main>
