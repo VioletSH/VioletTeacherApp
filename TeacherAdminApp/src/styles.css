@@ -304,6 +304,7 @@ input:checked + .slider:before {
     background: #B960EB;
     color: white;
     transition: 0.3s;
+    max-width: 48%;
 }
 .hex-big-item:hover{
     transform: scale(1.04,1.04);
@@ -318,6 +319,7 @@ input:checked + .slider:before {
     background: white;
     color: var(--color-ppal);
     position: initial;
+    max-width: none;
 }
 .hex-big-item .hex-big-item:hover{
     transform: none;
@@ -355,34 +357,65 @@ input:checked + .slider:before {
 /*Other Shapes (elements needs to inherit hex class)*/
 .btn-hex-right{
     --hex-shape: polygon(10% 0%, 90% 0%, 80% 50%, 90% 100%, 10% 100%, 0% 50%);
-    min-width: 8em;
-    min-height: 2em;
+    min-width: 12rem;
+    min-height: 3rem;
+    font-size: 1.2em;
+    justify-content: flex-start;
+}
+.btn-hex-right span{
+    margin-left: 10%;
 }
 .btn-hex-right::before{
-    --hex-shape: polygon(9% 0%, 89% 0%, 80% 50%, 89% 100%, 9% 100%, 0% 50%);
+    --hex-shape: polygon(10% 0%, 90% 0%, 80% 50%, 90% 100%, 10% 100%, 0% 50%);
+    transition: .25s;
 }
 .btn-hex-left{
     --hex-shape: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 20% 50%);
-    min-width: 8em;
-    min-height: 2em;
+    min-width: 12rem;
+    min-height: 3rem;
+    font-size: 1.2rem;
+    justify-content: flex-start;
+}
+.btn-hex-left span{
+    margin-right: 10%;
 }
 .btn-hex-left::before{
     --hex-shape: polygon(11% 0%, 91% 0%, 100% 50%, 91% 100%, 11% 100%, 20% 50%);
+    transition: .25s;
+
 }
+.btn-hex-left:hover, .btn-hex-right:hover{
+    color: white;
+}
+.btn-hex-left:hover::before, .btn-hex-right:hover::before{
+    background: transparent;
+}
+
 
 /*__________________________________________________*/
 
 /*__________________________________________________*/
-.hex-container{
-    width: auto;
-    flex-flow: row wrap;
+@media(min-width:1200px){
+    .hex-container{
+        flex-flow: row wrap;
+        padding:  2% 15%;
+    }
+    .hex-container > :nth-child(even){
+        top: 4em;
+        left: -1.2em;
+    }
+    .hex-container > :nth-child(odd){
+        right: -1.2em;
+    }
+
 }
-.hex-container > :nth-child(even){
-    top: 4em;
-    left: -1.2em;
-}
-.hex-container > :nth-child(odd){
-    right: -1.2em;
+@media(max-width:768px){
+    .hex-container{
+        flex-direction: column;
+    }
+    .hex-big-item{
+        max-width: 100vw;
+    }
 }
 /*__________________________________________________*/
 
@@ -391,3 +424,6 @@ input:checked + .slider:before {
     z-index: 2;
 }
 /*__________________________________________________*/
+.h-100{
+    min-height: 80vh; /*Ovverides to add some behavier on childcomponents*/
+}
