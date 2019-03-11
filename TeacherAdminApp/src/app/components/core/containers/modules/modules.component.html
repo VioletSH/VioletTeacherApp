@@ -7,7 +7,7 @@
                     <h6>{{module.name}}</h6>
                     <span>{{module.totalStudentsFinished}}/{{totalStudents}} estudiantes culminaron el módulo</span>
                 </div>
-                <div class="hex ml-auto">
+                <div class="hex ml-auto" [ngStyle]="{'background': 'rgba(153,63,203,'+ (module.totalStudentsFinished/totalStudents) +')'}">
                     {{module.totalStudentsFinished/totalStudents * 100}}%
                 </div>
             </div>
