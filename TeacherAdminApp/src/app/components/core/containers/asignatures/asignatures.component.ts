@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalAsignaturesComponent } from '../../layouts/modal-asignatures/modal-asignatures.component';
 
 @Component({
   selector: 'app-asignatures',
@@ -8,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class AsignaturesComponent implements OnInit {
 
   asignatures:Array<object>;
-  constructor() { 
+
+  constructor(private modalService: NgbModal) { 
     this.asignatures = [
       {
         name:"Arquitectura de Sistemas Multimedia",
@@ -32,6 +35,15 @@ export class AsignaturesComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  onOpenModal() {
+    const modalRef = this.modalService.open(ModalAsignaturesComponent,
+      { centered: true, size: 'lg' });
+    // If we have some input
+    // modalRef.componentInstance.establecimientos = this.establecimientos;
+    modalRef.result.then(() => {
+    });
   }
 
 }

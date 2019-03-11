@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ModalGenericoModel } from 'src/app/shared/models/modal.model';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-modal-activities',
   templateUrl: './modal-activities.component.html',
-  styleUrls: ['./modal-activities.component.css']
+  styleUrls: ['./modal-activities.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ModalActivitiesComponent implements OnInit {
 

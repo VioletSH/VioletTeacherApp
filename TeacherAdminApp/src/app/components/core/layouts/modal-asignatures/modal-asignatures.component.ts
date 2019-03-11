@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ModalGenericoModel } from 'src/app/shared/models/modal.model';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-modal-asignatures',
   templateUrl: './modal-asignatures.component.html',
-  styleUrls: ['./modal-asignatures.component.css']
+  styleUrls: ['./modal-asignatures.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ModalAsignaturesComponent implements OnInit {
 
