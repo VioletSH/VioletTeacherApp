@@ -139,6 +139,12 @@ h2,h3,h5{
     font-size:0.9em;
     color: var(--color-ppal);
 }
+.text-input [class^=icon-]{
+    position: absolute;
+    font-size: 1.8em;
+    right: 0;
+    top: 2px;
+}
 
 /* BOTTOM BARS ================================= */
 .bar 	{ position:relative; display:block; width:100%; }
@@ -444,3 +450,11 @@ input:checked + .slider:before {
     z-index: 2;
 }
 /*__________________________________________________*/
+.table{
+    background-color: white;
+    border: 3px solid #993FCB;
+}
+.table2{
+    height: 100px;
+    overflow-y: auto; 
+}
