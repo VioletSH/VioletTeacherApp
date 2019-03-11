@@ -43,7 +43,10 @@ export class ModulesComponent implements OnInit {
         { centered: true, size: 'lg' });
       // If we have some input
       // modalRef.componentInstance.establecimientos = this.establecimientos;
-      modalRef.result.then(() => {
+      modalRef.result.then((formAnswer:any) => {
+        if (formAnswer){
+          this.modules.push({name: formAnswer.title, totalStudentsFinished: 0});
+        }
       });
     }
 

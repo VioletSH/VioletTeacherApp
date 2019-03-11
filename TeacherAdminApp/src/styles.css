@@ -358,6 +358,10 @@ input:checked + .slider:before {
     right: -2px;
 }
 
+.icon-options{
+    z-index: 200;
+}
+
 /*Other Shapes (elements needs to inherit hex class)*/
 .btn-hex-left, .btn-hex-right{
     min-width: 12rem;

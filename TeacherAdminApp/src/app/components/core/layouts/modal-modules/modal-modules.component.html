@@ -1,20 +1,23 @@
 <app-modal-generico [modelo]="modalGenerico">
     <main class="ml-5 mr-5 mb-4">
-      <div class="text-input mb-5">      
-        <input type="text" id="titulo" name="titulo" required>
-          <span class="highlight"></span>
-          <span class="bar"></span>
-        <label>Título</label>
-      </div>
-      <div class="text-input mb-5">      
-        <input type="text" id="descripcion" name="descripcion" required>
-          <span class="highlight"></span>
-          <span class="bar"></span>
-        <label>Descripción</label>
-      </div>
-      <div class="d-flex flex-row flex-wrap justify-content-center ml-auto mr-auto col-4">
-        <button class="btn btn-violet-primary">Aceptar</button>
-        <button class="btn btn-violet-secondary">Cancelar</button>
-      </div>
+      
+      <form [formGroup]="formModule" (ngSubmit)="onSave()">
+        <div class="text-input mb-5">      
+          <input type="text" id="title" formControlName="title">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+          <label>Título</label>
+        </div>
+        <div class="text-input mb-5">      
+          <input type="text" id="description" formControlName="description">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+          <label>Descripción</label>
+        </div>
+        <div class="d-flex flex-row flex-wrap justify-content-center ml-auto mr-auto col-4">
+          <button class="btn btn-violet-primary" type="submit" [disabled]="!formModule.valid">Aceptar</button>
+          <button class="btn btn-violet-secondary" (click)="confirm()">Cancelar</button>
+        </div>
+      </form>  
     </main>
   </app-modal-generico>
