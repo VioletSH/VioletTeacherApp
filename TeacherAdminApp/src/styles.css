@@ -302,6 +302,7 @@ input:checked + .slider:before {
     background: #B960EB;
     color: white;
     transition: 0.3s;
+    max-width: 48%;
 }
 .hex-big-item:hover{
     transform: scale(1.04,1.04);
@@ -316,6 +317,7 @@ input:checked + .slider:before {
     background: white;
     color: var(--color-ppal);
     position: initial;
+    max-width: none;
 }
 .hex-big-item .hex-big-item:hover{
     transform: none;
@@ -371,16 +373,27 @@ input:checked + .slider:before {
 /*__________________________________________________*/
 
 /*__________________________________________________*/
-.hex-container{
-    width: auto;
-    flex-flow: row wrap;
+@media(min-width:1200px){
+    .hex-container{
+        flex-flow: row wrap;
+        padding:  2% 15%;
+    }
+    .hex-container > :nth-child(even){
+        top: 4em;
+        left: -1.2em;
+    }
+    .hex-container > :nth-child(odd){
+        right: -1.2em;
+    }
+
 }
-.hex-container > :nth-child(even){
-    top: 4em;
-    left: -1.2em;
-}
-.hex-container > :nth-child(odd){
-    right: -1.2em;
+@media(max-width:768px){
+    .hex-container{
+        flex-direction: column;
+    }
+    .hex-big-item{
+        max-width: 100vw;
+    }
 }
 /*__________________________________________________*/
 
@@ -389,3 +402,6 @@ input:checked + .slider:before {
     z-index: 2;
 }
 /*__________________________________________________*/
+.h-100{
+    min-height: 80vh; /*Ovverides to add some behavier on childcomponents*/
+}
