@@ -6,9 +6,12 @@
 
 body, html {
     width: 100%;
-    height: Calc(100% - 100px); /*Allows router-outlet components to fill reaming space, 100px is the nav height*/
+    height: 100%;
     font-family: 'Google Sans' !important;
     background-color: #f5f5f5 !important; 
+}
+body{
+    max-height: Calc(100% - 100px); /*Allows router-outlet components to fill reaming space, 100px is the nav height*/
 }
 
 /*Animations*/
