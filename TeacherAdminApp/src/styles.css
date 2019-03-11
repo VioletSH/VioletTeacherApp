@@ -365,12 +365,17 @@ input:checked + .slider:before {
     font-size: 1.4em;
     justify-content: flex-start;
 }
-
+.btn-hex-left:hover::before, .btn-hex-right:hover::before{
+    background: transparent;
+}
+.btn-hex-left:hover, .btn-hex-right:hover{
+    color: white;
+}
 .btn-hex-right{
     --hex-shape: polygon(10% 0%, 90% 0%, 80% 50%, 90% 100%, 10% 100%, 0% 50%);
 }
 .btn-hex-right span{
-    margin-left: 0.6em;
+    margin-left: 0.8em;
 }
 .btn-hex-right::before{
     --hex-shape: polygon(10% 0%, 90% 0%, 80% 50%, 90% 100%, 10% 100%, 1% 50%);
@@ -380,7 +385,7 @@ input:checked + .slider:before {
     --hex-shape: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 20% 50%);
 }
 .btn-hex-left span{
-    margin-right: 0.6em;
+    margin-right: 0.8em;
 }
 .btn-hex-left::before{
     --hex-shape: polygon(10% 0%, 91% 0%, 100% 50%, 91% 100%, 10% 100%, 20% 50%);
