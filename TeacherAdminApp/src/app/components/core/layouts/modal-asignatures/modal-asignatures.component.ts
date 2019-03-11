@@ -18,7 +18,7 @@ export class ModalAsignaturesComponent implements OnInit {
 
   ngOnInit() {
     this.modalGenerico = {
-      titulo: 'Editar módulo'
+      titulo: 'Agregar asignatura'
     };
     this.formAsignature = this.formBuilder.group({
       title: ['', Validators.required],

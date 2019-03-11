@@ -33,7 +33,7 @@ export class ModalActivitiesComponent implements OnInit {
 
   ngOnInit() {
     this.modalGenerico = {
-      titulo: 'Editar actividad'
+      titulo: 'Agregar actividad'
     };
   }
 

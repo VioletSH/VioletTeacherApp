@@ -4,13 +4,19 @@ import { AsignaturesComponent } from './components/core/containers/asignatures/a
 import { ActivitiesComponent } from './components/core/containers/activities/activities.component';
 import { NgModule } from '@angular/core';
 import { LoginComponent } from './components/home/containers/login/login.component';
+import { MenuTemplate1Component } from './components/menu/layouts/menu-template1/menu-template1.component';
 
 export const ROUTES: Routes = [
-	{ path: 'home', component: LoginComponent },
-	{ path: 'modules', component: ModulesComponent },
-	{ path: 'asignatures', component: AsignaturesComponent },
-	{ path: 'activities', component: ActivitiesComponent },
-	{ path: '', redirectTo: '/home', pathMatch: 'full' },
+	{ path: 'login', component: LoginComponent },
+	{ path: 'home', component: MenuTemplate1Component,
+		children:[
+			{ path: 'modules', component: ModulesComponent },
+			{ path: 'asignatures', component: AsignaturesComponent },
+			{ path: 'activities', component: ActivitiesComponent },
+			{ path: '', redirectTo: 'asignatures', pathMatch: 'full' },
+		]
+	},
+	{ path: '', redirectTo: '/login', pathMatch: 'full' },
 ];
 
 
@@ -18,7 +24,6 @@ export const ROUTES: Routes = [
 	imports: [
 		RouterModule.forRoot(
 			ROUTES,
-			
 		)
 	],
 	exports: [
