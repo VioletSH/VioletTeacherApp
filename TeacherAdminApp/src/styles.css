@@ -405,9 +405,9 @@ input:checked + .slider:before {
 
 /*Other Shapes (elements needs to inherit hex class)*/
 .btn-hex-left, .btn-hex-right{
-    min-width: 12rem;
-    min-height: 3rem;
-    font-size: 1.4em;
+    min-width: 10rem;
+    min-height: 1rem;
+    font-size: 1.2em;
     justify-content: flex-start;
 }
 .btn-hex-left:hover::before, .btn-hex-right:hover::before{

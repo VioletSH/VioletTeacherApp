@@ -2,7 +2,7 @@
     <div class="hex-container container d-flex flex-wrap">
         <div *ngFor="let module of modules; index as i" class="hex hex-big-item position-relative">
             <div class="hex hex-big-item d-flex">
-                <div class="item-content d-flex flex-column">
+                <div class="item-content d-flex flex-column" [routerLink]="['/home/activities']">
                     <h3> Módulo {{i+1}}</h3>
                     <h6>{{module.name}}</h6>
                     <span>{{module.totalStudentsFinished}}/{{totalStudents}} estudiantes culminaron el módulo</span>

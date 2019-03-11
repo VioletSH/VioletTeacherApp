@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center align-items-center h-100">
     <div class="hex-container container d-flex flex-wrap">
         <div *ngFor="let asignature of asignatures" class="hex hex-big-item position-relative">
-            <div class="hex hex-big-item d-flex">
+            <div class="hex hex-big-item d-flex " [routerLink]="['/home/modules']">
                 <div class="item-content d-flex flex-column">
                     <h3> {{ (asignature.name.length>25)? (asignature.name | slice:0:25)+'..':(asignature.name) }}</h3>
                     <h6>{{asignature.career}}</h6>

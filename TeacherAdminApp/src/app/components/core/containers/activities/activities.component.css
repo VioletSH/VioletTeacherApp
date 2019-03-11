@@ -28,13 +28,13 @@ em{
     right: 2rem;
     vertical-align: middle;
     color: white;
-    --hex-width: 10rem;
-    font-size: 5rem;
-    background: var(--color-ppal);
+    --hex-width: 5rem;
+    font-size: 2rem;
+    background: var(--bg-darker);
 }
 .float-button::before{
     content: none;
 }
 .float-button:hover{
-    background: var(--bg-darker);
+    background: var(--bg-gradient);
 }

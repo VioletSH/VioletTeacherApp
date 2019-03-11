@@ -2,8 +2,11 @@
     margin: auto -0.5em;
 }
 [class^="icon-"]{
-    font-size: 3em;
+    font-size: 1.8em;
     position: absolute;
-    top: -0.22em;
-    right: 0.52em;
+    top: -0em;
+    right: 1.2em;
+}
+img{
+    max-height: 50px;
 }
